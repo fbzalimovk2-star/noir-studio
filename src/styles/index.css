@@ -1,0 +1,16 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth;background:#0b0b0c;color-scheme:dark}
+body{@apply bg-ink text-white font-sans font-light antialiased}
+select option{background:#0b0b0c;color:#fff}
+::selection{background:#fff;color:#0b0b0c}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@layer components{
+.wrap{@apply mx-auto max-w-[1600px] px-5 md:px-10}
+.label{@apply text-[11px] uppercase tracking-[.28em]}
+.btn{@apply inline-flex items-center justify-center gap-3 border border-white bg-white px-8 py-4 text-[11px] uppercase tracking-[.25em] text-ink transition hover:bg-transparent hover:text-white disabled:opacity-40}
+.btn-o{@apply inline-flex items-center justify-center gap-3 border border-white/50 px-8 py-4 text-[11px] uppercase tracking-[.25em] transition hover:bg-white hover:text-ink}
+.input{@apply w-full border-b border-white/30 bg-transparent py-3 outline-none placeholder:text-white/40 focus:border-white}
+.display{@apply font-serif font-light uppercase leading-[.92]}
+.chip{@apply border border-white/30 px-4 py-2 text-xs uppercase tracking-widest transition hover:border-white}
+}
